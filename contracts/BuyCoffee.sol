@@ -2,7 +2,6 @@
 pragma solidity 0.8.17;
 
 contract BuyCoffee {
-    // errors
     error BuyCoffe__CannotBuy();
     error BuyCoffe__OnlyOwner();
 
@@ -52,5 +51,9 @@ contract BuyCoffee {
 
     function getMemos() public view returns (Memo[] memory) {
         return memos;
+    }
+
+    function getOwner() public view returns (address) {
+        return owner;
     }
 }
